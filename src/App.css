@@ -1,0 +1,101 @@
+#root {
+  width: 100%;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.habit-container {
+  width: 100%;
+  max-width: 650px;
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 42px;
+}
+
+.header p {
+  margin-top: 10px;
+  color: #666;
+}
+
+.habit-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.habit-form input {
+  flex: 1;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+}
+
+.habit-form input:focus {
+  border-color: #646cff;
+}
+
+.habit-form button {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #646cff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.habit-form button:hover {
+  opacity: 0.9;
+}
+
+.habit-list h2 {
+  margin-bottom: 15px;
+}
+
+.habit-item {
+  padding: 16px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.habit-item label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.habit-item input {
+  width: 18px;
+  height: 18px;
+}
+
+.habit-item.completed span {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.empty-message {
+  color: #888;
+  text-align: center;
+}

@@ -1,75 +1,62 @@
-# React + TypeScript + Vite
+# HabitFlow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web full-stack para la gestión de hábitos personales.
 
-Currently, two official plugins are available:
+## Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+HabitFlow es una aplicación web que permite gestionar hábitos personales. Los usuarios podrán crear, consultar, actualizar, completar y eliminar sus hábitos.
 
-## React Compiler
+## Objetivo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Desarrollar una aplicación web full-stack utilizando React, TypeScript, Express y Supabase, aplicando un flujo de trabajo basado en ramas por funcionalidad y Pull Requests.
 
-## Expanding the ESLint configuration
+## Tecnologías
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* React
+* TypeScript
+* Node.js
+* Express
+* Supabase
+* GitHub
+* Vercel
+* Render
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Funcionalidades
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* Crear hábitos
+* Visualizar hábitos
+* Marcar hábitos como completados
+* Editar hábitos
+* Eliminar hábitos
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Arquitectura
 
-```
+### Frontend
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+React + TypeScript
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Backend
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Node.js + Express
 
+### Base de datos
+
+Supabase
+
+### Despliegue
+
+Frontend: Vercel
+
+Backend: Render
+
+## Flujo de desarrollo
+
+El proyecto utiliza ramas independientes para desarrollar cada funcionalidad.
+
+```text
+feature/*
+    ↓
+Pull Request
+    ↓
+main
 ```

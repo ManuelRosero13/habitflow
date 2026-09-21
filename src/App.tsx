@@ -1,12 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import HabitItem from "./components/HabitItem";
+import type { Habit } from "./types/habit";
 
-interface Habit {
-  id: number;
-  name: string;
-  completed: boolean;
-}
 
 function App() {
   const [habits, setHabits] = useState<Habit[]>([

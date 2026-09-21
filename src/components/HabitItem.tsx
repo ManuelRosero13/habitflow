@@ -1,8 +1,4 @@
-interface Habit {
-  id: number;
-  name: string;
-  completed: boolean;
-}
+import type { Habit } from "../types/habit";
 
 interface HabitItemProps {
   habit: Habit;

@@ -1,6 +1,6 @@
 import type { Habit } from "../types/habit";
 
-const API_URL = "http://localhost:3000/api/habits";
+const API_URL = `${import.meta.env.VITE_API_URL}/api/habits`;
 
 export async function getHabits(): Promise<Habit[]> {
   const response = await fetch(API_URL);

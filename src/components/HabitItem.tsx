@@ -2,10 +2,11 @@ import type { Habit } from "../types/habit";
 
 interface HabitItemProps {
   habit: Habit;
-  onToggle: (id: number) => void;
+  onToggle: (id: string) => void;
+  onDelete: (id: string) => void;
 }
 
-function HabitItem({ habit, onToggle }: HabitItemProps) {
+function HabitItem({ habit, onToggle, onDelete }: HabitItemProps) {
   return (
     <article
       className={`habit-item ${habit.completed ? "completed" : ""}`}
@@ -19,6 +20,14 @@ function HabitItem({ habit, onToggle }: HabitItemProps) {
 
         <span>{habit.name}</span>
       </label>
+
+      <button
+        type="button"
+        onClick={() => onDelete(habit.id)}
+        className="delete-button"
+      >
+        Eliminar
+      </button>
     </article>
   );
 }
